@@ -22,9 +22,9 @@ if __name__ == '__main__':
     for item in all_files_path_list:
         try:
             file_size = Path(item).stat().st_size
-            local_file_size = Path(item.replace('F:\iPod_Control', 'D:\WebsiteProject')).stat().st_size
+            local_file_size = Path(item.replace('F:\iPod_Control', 'D:\Music')).stat().st_size
             if file_size != local_file_size:
-                leak_mp3.append(item.replace('F:\iPod_Control', 'D:\WebsiteProject'))
+                leak_mp3.append(item.replace('F:\iPod_Control', 'D:\Music'))
         except:
             leak_mp3.append(item)
 
